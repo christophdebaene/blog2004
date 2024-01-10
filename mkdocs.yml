@@ -1,0 +1,80 @@
+site_name: Christoph De Baene 2004
+site_url: https://christophdebaene.github.io
+site_description: About life en technology
+site_author: Christoph De Baene
+
+repo_name: christophdebaene/blog2004
+repo_url: https://github.com/christophdebaene/blog2004
+edit_uri: ""
+
+copyright: "Copyright &copy; 2004-2014 Christoph De Baene"
+
+theme:
+  language: en
+  name: material  
+  font:
+    text: Poppins
+    code: Roboto Mono
+  icon: 
+    logo: material/book-open-page-variant  
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+      
+plugins:
+  - search
+  - table-reader  
+  - blog:
+      blog_toc: true
+      blog_dir: .
+      post_url_format: "{slug}"
+      post_excerpt: optional
+      post_date_format: long
+      post_url_date_format: yyyy/MM/dd
+      archive: true
+      authors: false
+  
+markdown_extensions:
+  - attr_list
+  - admonition
+  - md_in_html    
+  - pymdownx.details
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.keys
+  - pymdownx.tasklist
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.highlight:
+      guess_lang: true
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+      extend_pygments_lang:
+        - name: php
+          lang: php
+          options:
+            startinline: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  
+extra:
+  social:    
+    - icon: material/twitter
+      link: 'https://twitter.com/ChrisDeBaene'
+    - icon: material/github
+      link: 'https://github.com/christophdebaene'
+  
+extra_javascript:
+    - assets/js/extra.js
+extra_css:
+    - assets/css/extra.css
