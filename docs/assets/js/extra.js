@@ -1,24 +1,23 @@
-const excludes = [
-    'https://github.com/christophdebaene/blog2004',
-    'https://twitter.com/ChrisDeBaene',
-    'https://github.com/christophdebaene'    
-];
-
 function iconlink()
 {
-    const links = document.getElementsByTagName("a");
+    const content = document.querySelector(".md-content");    
+    if (!content) {        
+        return;
+    }
+
+    const links = content.querySelectorAll("a");
             
     for (const link of links) {
                                 
         const href = link.getAttribute("href");
-        if (href && href.startsWith("http") && link.hostname !== location.hostname && !excludes.includes(href))
-        {                           
+        if (href && href.startsWith("http") && link.hostname !== location.hostname)
+        {
             link.target = "_blank";
             link.rel = "noopener";
             
-            const img = document.createElement("img");
+            const img = document.createElement("img");            
             img.src = "https://www.google.com/s2/favicons?domain=" + href;
-            img.className = "iconlink";
+            img.className = "icon-link";
             img.width = 16;
             img.height = 16;
             
@@ -27,6 +26,6 @@ function iconlink()
     }
 }
 
-window.addEventListener("DOMContentLoaded", function() {
-    iconlink();
-});
+document$.subscribe(function() {
+    iconlink();    
+})
