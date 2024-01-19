@@ -1,0 +1,10 @@
+.md-header {    
+    background: linear-gradient(90deg, rgb(41, 41, 41)0%, rgba(80,80,80,1) 100%);
+}
+
+.md-social__link {
+    width: 2rem;
+}
+.md-social__link svg {
+    max-height: 1.6rem;
+}
