@@ -75,6 +75,8 @@ extra:
       link: 'https://github.com/christophdebaene'
   
 extra_javascript:
-    - assets/js/extra.js
+    - assets/js/favicons.config.js
+    - assets/js/favicons.js
 extra_css:
-    - assets/css/extra.css
+    - assets/css/favicons.css
+    - assets/css/site.css 
