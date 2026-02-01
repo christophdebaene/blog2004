@@ -13,7 +13,7 @@ theme:
   language: en
   name: material
   font:
-    text: Poppins
+    text: Merrywheather Sans
     code: Roboto Mono
   icon: 
     logo: material/book-open-page-variant  
