@@ -11,7 +11,7 @@ copyright: "Copyright &copy; 2004-2014 Christoph De Baene"
 
 theme:
   language: en
-  name: material  
+  name: material
   font:
     text: Poppins
     code: Roboto Mono
